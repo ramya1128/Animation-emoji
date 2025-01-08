@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+}
+p,h1{
+    color: white;
+    margin-right: 100px;
+}
+audio{
+    height: 100px;
+    width: 100px;
+    border-radius: 10px 10px 10px 10px;
+    position: absolute;
+    right: 750px;
+    bottom: 200px;
+}
+.ghost{
+    cursor: pointer;
+    position: relative;
+    width: 160px;
+    height: 180px;
+    background: white;
+    border-radius: 70px 70px 0 0;
+    transform: translateY(-15px);
+    animation: float 4s linear infinite;
+}
+@keyframes float{
+    50%{
+        transform: translateY(15px);
+    }
+}
+.ghost .face{
+    width: 120px;
+    position: absolute;
+    top: 60px;
+    left: calc(50% - 60px);
+}
+.ghost .eye{
+    height: 24px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 18px;
+}
+.ghost .eye .eye1{
+    width: 24px;
+    height: 12px;
+    background: black;
+    border-radius: 8px 8px 26px 26px;
+    transition: 0.4s;
+}
+.ghost .eye .eye2{
+    width: 24px;
+    height: 12px;
+    background: black;
+    border-radius: 8px 8px 26px 26px;
+    transition: 0.4s;
+}
+.ghost:hover .eye .eye1{
+    height: 24px;
+    border-radius: 50%;
+}
+.ghost:hover .eye .eye2{
+    height: 24px;
+    border-radius: 50%;
+}
+.ghost .mouth{
+    display: flex;
+    justify-content: space-around;
+}
+.ghost .mouth .m{
+    width: 40px;
+    height: 9px;
+    background: black;
+    border-radius: 0 0 20px 20px;
+    transition: 0.4s;
+}
+.ghost:hover .mouth .m{
+    height: 20px;
+}
+.ghost .hand{
+    width: 220px;
+    position: absolute;
+    left: -30px;
+    top: 90px;
+    display: flex;
+    justify-content: space-between;
+}
+.ghost .hand .hand1{
+    width: 30px;
+    height: 30px;
+    background: white;
+    transform: translateY(-5px);
+    animation: shake 4s linear infinite;
+}
+.ghost .hand .hand2{
+    width: 30px;
+    height: 30px;
+    background: white;
+    transform: translateY(-5px);
+    animation: shake 4s linear infinite;
+}
+@keyframes shake{
+    50%{
+        transform: translateY(5px);
+    }
+}
+.ghost .hand .hand1:first-child{
+    border-radius: 12px 0 0 20px;
+}
+.ghost .hand .hand1:last-child{
+    border-radius: 0 12px 20px 0;
+    animation-delay: 2s;
+}
+.ghost .hand .hand2:first-child{
+    border-radius: 12px 0 0 20px;
+}
+.ghost .hand .hand2:last-child{
+    border-radius: 0 12px 20px 0;
+    animation-delay: 2s;
+}
+.ghost .feet{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    bottom: -20px;
+}
+.ghost .feet span{
+    flex: 1;
+    height: 22px;
+    background: white;
+    border-radius: 0 0 20px 20px;
+}
+/*
+body{
+    transform: skewY(45deg);
+}*/
